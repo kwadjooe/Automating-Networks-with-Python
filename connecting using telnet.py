@@ -3,7 +3,7 @@ import telnetlib
 
 IP= input("Enter the IP Address: ")
 user= input("Enter your Username: ")
-password= getpass.getpass
+password= getpass.getpass()
 tn = telnetlib.Telnet(IP)
 
 
@@ -21,4 +21,4 @@ tn.write(b"show version\n")
 tn.write(b"end\n")
 
 
-print(tn.read_all().decode("ascii"))
+print(tn.read_all().decode('ascii'))
