@@ -22,6 +22,7 @@ tn.write(b"ip add 1.1.1.1 255.255.255.255\n")
 tn.write(b"end\n")
 tn.write(b"write mem\n")
 tn.write(b"end\n")
+tn.write(b"exit\n")
 
 
 print(tn.read_all().decode('ascii'))
