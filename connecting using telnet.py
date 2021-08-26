@@ -16,8 +16,11 @@ if password:
 
 tn.write(b"enable\n")
 tn.write(b"cisco\n")
-#tn.write(b"config terminal\n")
-tn.write(b"show version\n")
+tn.write(b"config terminal\n")
+tn.write(b"interface lo0\n")
+tn.write(b"ip add 1.1.1.1 255.255.255.255\n")
+tn.write(b"end\n")
+tn.write(b"write mem\n")
 tn.write(b"end\n")
 
 
