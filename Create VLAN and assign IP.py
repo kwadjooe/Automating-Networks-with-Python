@@ -11,7 +11,7 @@ tn = telnetlib.Telnet(IP)
 tn.read_until(b"Username: ")
 tn.write(user.encode('ascii') + b"\n")
 if password:
-    tn.write(password.encode(ascii) + b"\n")
+    tn.write(password.encode('ascii') + b"\n")
 
 tn.write(b"enable\n")
 tn.write(b"cisco\n")
